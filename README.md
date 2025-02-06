@@ -1,2 +1,5 @@
 # daa
-# All data structures
+# Linked Lists
+## Single Linked
+## Doubly Linked
+## Circular
