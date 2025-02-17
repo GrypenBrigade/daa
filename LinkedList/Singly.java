@@ -1,13 +1,13 @@
 package LinkedList;
 
 
-class Node { // Node class 
+class Node {
     int val; // Node Data
     Node next; // Node pointer
 
     public Node (int val) { //This makes a node
         this.val = val;
-        this.next = null;
+        this.next = null; 
     }
 
 
@@ -17,7 +17,7 @@ class Node { // Node class
 public class Singly {
     private Node head;
 
-    public static void traversal(Node head) { // Method that traverses the list
+    public void traversal(Node head) { // Method that traverses the list
         //Start from the head
         Node current = head;
 
@@ -25,9 +25,11 @@ public class Singly {
             System.out.print(current.val + ", "); // Print the node data
             current = current.next; // Move to the next node
         }
+
+        System.out.println("");
     }
 
-    public static boolean search(Node head, int search) { // Method that searches if a specific value exist
+    public boolean search(Node head, int search) { // Method that searches if a specific value exist
         while(head != null) { // Keep running until null
             if (head.val == search) { // Check if the value is the same as we are searching
                 return true; // Return true if the value is the same as we are searching
@@ -39,12 +41,12 @@ public class Singly {
         return false; // Return false if the specific value does not 
     }
 
-    public static int length(Node head) { // Method that measures the length of the list
+    public int length(Node head) { // Method that measures the length of the list
         int length = 0; // Initialization
         Node current = head; // Start from the start
         while(current != null) { // Keep running until the end of the list
             length++; // Add length value
-            current.next = current; // Move to the next one
+            current = current.next; // Move to the next one
         }
         return length; // Return final length
 
@@ -167,7 +169,23 @@ public class Singly {
     }
 
     public static void main(String[] args) {
-        
+        Singly singlyList = new Singly();
+
+        System.out.println("Singly linked list");
+        System.out.println("Making list with elements 100, 210, 312");
+
+        Node head = new Node(100);
+        head.next = new Node(210);
+        head.next.next = new Node(312);
+
+        System.out.println("Printing the list");
+        singlyList.traversal(head);
+
+        System.out.println("Measuring the length of the list: ");
+        System.out.print("Length of list is " + singlyList.length(head));
+
+
+
     }
 
 
