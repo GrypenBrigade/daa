@@ -25,8 +25,6 @@ public class Singly {
             System.out.print(current.val + ", "); // Print the node data
             current = current.next; // Move to the next node
         }
-
-        System.out.println("");
     }
 
     public boolean search(Node head, int search) { // Method that searches if a specific value exist
@@ -107,7 +105,7 @@ public class Singly {
         return head; // Return new node
     }
 
-    public static Node deleteStart(Node head) { // Method that removes the starting node
+    public Node deleteStart(Node head) { // Method that removes the starting node
         if (head == null) { // Return null if list is empty
             return null;
         }
@@ -119,7 +117,7 @@ public class Singly {
         return head; // Return new first node
     }
 
-    public static Node deleteEnd(Node head) { // Method that removes the ending node
+    public Node deleteEnd(Node head) { // Method that removes the ending node
         if (head == null) { // Return null if list is empty
             return null;
         }
@@ -140,17 +138,17 @@ public class Singly {
         return head; // Return new last node
     }
 
-    public static void deletePos(Node head, int pos) { // Method that deletes the node of a given postion
+    public Node deletePos(Node head, int pos) { // Method that deletes the node of a given postion
         if (head == null || pos < 1) { // Check
             System.out.println("Not a valid position");
-            return;
+            return head;
         }
 
         if (pos == 1) { // If position is 1, delete it
             Node tempNode = head; // Create temporary node
             head = head.next; // Move node to another node
             tempNode = null; // Nullify tempNode
-            return;
+            return head;
         }
 
         Node currentNode = head; // Traverse the list to before the desired node to deleted
@@ -160,12 +158,13 @@ public class Singly {
 
         if (currentNode == null || currentNode == null) { // If position is out of range of the list
             System.out.println("Not a valid position");
-            return;
+            return head;
         }
 
         Node tempNode = currentNode.next; // Temporary node
         currentNode.next = currentNode.next.next; // Update nodes to bypass the deleted node
         tempNode = null; // Delete node
+        return head;
     }
 
     public static void main(String[] args) {
@@ -181,8 +180,53 @@ public class Singly {
         System.out.println("Printing the list");
         singlyList.traversal(head);
 
+        System.out.println(" \n");
+
         System.out.println("Measuring the length of the list: ");
         System.out.print("Length of list is " + singlyList.length(head));
+
+        System.out.println(" \n");
+
+        System.out.println("Inserting 999 at the start of the list");
+        head = singlyList.insertAtStart(head, 999);
+        singlyList.traversal(head);
+
+        System.out.println(" \n");
+
+        System.out.println("Inserting 1000 at the end of the list");
+        head = singlyList.insertAtEnd(head, 1000);
+        singlyList.traversal(head);
+
+        System.out.println(" \n");
+
+        System.out.println("Inserting 10000 at position 4");
+        head = singlyList.insertAtPos(head, 4, 10000);
+        singlyList.traversal(head);
+
+        System.out.println(" \n");
+
+        System.out.println("Deleting the first node");
+        head = singlyList.deleteStart(head);
+        singlyList.traversal(head);
+
+        System.out.println(" \n");
+
+        System.out.println("Deleting the last node");
+        head = singlyList.deleteEnd(head);
+        singlyList.traversal(head);
+
+        System.out.println(" \n");
+
+        System.out.println("Deleting position 3");
+        head = singlyList.deletePos(head, 3);
+        singlyList.traversal(head);
+
+
+
+
+
+
+
 
 
 
