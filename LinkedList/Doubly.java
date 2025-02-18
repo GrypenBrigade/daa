@@ -30,7 +30,7 @@ public class Doubly {
         Node currentNode = tail;
 
         while(currentNode != null) {
-            System.out.println(currentNode.val + ", ");
+            System.out.print(currentNode.val + ", ");
             currentNode = currentNode.prev;
         }
     }
@@ -68,7 +68,7 @@ public class Doubly {
     }
     
     public Node insertPos(Node head, int pos, int val) {
-        Node newNode = head;
+        Node newNode = new Node(val);
         if(pos == 1) {
             newNode.next = head;
 
@@ -125,7 +125,7 @@ public class Doubly {
         }
 
         Node currentNode = head;
-        while(currentNode != null) {
+        while(currentNode.next != null) {
             currentNode = currentNode.next;
         }
 
@@ -151,7 +151,7 @@ public class Doubly {
         }
         
         if (currentNode.prev != null) {
-            currentNode.next.prev = currentNode.next;
+            currentNode.prev.next = currentNode.next;
         }
         return head;
     }
