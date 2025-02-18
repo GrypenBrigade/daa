@@ -15,6 +15,8 @@ class Node {
 }
 
 public class Doubly {
+    private Node head;
+
     public void forwTraversal(Node head){
         Node currentNode = head;
 
@@ -42,7 +44,7 @@ public class Doubly {
     }
 
     public Node insertStart(Node head, int val){
-        Node newNode = new Node(0);
+        Node newNode = new Node(val);
         newNode.next = head;
         if(head != null){
             head.prev = newNode;
@@ -53,16 +55,15 @@ public class Doubly {
     public Node insertEnd(Node head, int val){
         Node newNode = new Node(val);
         if(head == null) {
-            head = newNode;
+            return newNode;
         }
-        else {
-            Node currentNode = head;
-            while(currentNode != null) {
-                currentNode = currentNode.next;
-            }
-            currentNode.next = newNode;
-            newNode.prev = currentNode;
+        Node currentNode = head;
+        while(currentNode.next != null) {
+            currentNode = currentNode.next;
         }
+        currentNode.next = newNode;
+        newNode.prev = currentNode;
+        
         return head;
     }
     
@@ -153,5 +154,22 @@ public class Doubly {
             currentNode.next.prev = currentNode.next;
         }
         return head;
+    }
+
+    public static void main(String[] args) {
+        Doubly doubly = new Doubly();
+
+        Node head = new Node(1000);
+        Node second = new Node(2000);
+        Node third = new Node(3000);
+
+        head.next = second;
+        second.next = third;
+
+        second.prev = head;
+        third.prev = second;
+
+        doubly.forwTraversal(head);
+        doubly.backTraversal(third);
     }
 }
