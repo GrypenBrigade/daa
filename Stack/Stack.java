@@ -53,7 +53,7 @@ public class Stack {
         System.out.print("Stack: ");
         while (tempNode != null){ // Runs until it reaches the end
             System.out.print(tempNode.val + ", ");
-            tempNode = tempNode.next;
+            tempNode = tempNode.next; // Move to the next node
         }
     }
 
