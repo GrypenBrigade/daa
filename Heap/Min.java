@@ -14,21 +14,21 @@ public class Min {
         Heap[0] = Integer.MIN_VALUE;
     }
 
-    private int parent(int p) { return p / 2; }
-    private int left(int p) { return p * 2; }
-    private int right(int p) { return (p * 2) + 1; }
+    private int parent(int p) { return p / 2; } // Returns the position of the parent node
+    private int left(int p) { return p * 2; } // Returns the position of the left node
+    private int right(int p) { return (p * 2) + 1; } // Returns the position of right node
 
-    private boolean leaf(int p) {
+    private boolean leaf(int p) { // Method that checks if there are leaf nodes
         return p > size / 2 && p <= size;
     }
 
-    private void swap(int fp, int sp) {
+    private void swap(int fp, int sp) { // Method that swaps nodes in the heap
         int tmp = Heap[fp];
         Heap[fp] = Heap[sp];
         Heap[sp] = tmp;
     }
 
-    private void minH(int p) {
+    private void minH(int p) { // Method that makes the min heap
         if (!leaf(p)) {
             int swapP = p;
 
@@ -45,7 +45,7 @@ public class Min {
         }
     }
 
-    public void insert(int e) {
+    public void insert(int e) { // Method that inserts nodes in the heap
         if (size >= maxsize) {
             System.out.println("Heap is full!");
             return;
@@ -60,7 +60,7 @@ public class Min {
         }
     }
 
-    public int remove() {
+    public int remove() { // Method that removes nodes in a heap
         if (size == 0) {
             System.out.println("Heap is empty!");
             return -1;
@@ -73,7 +73,7 @@ public class Min {
         return pop;
     }
 
-    public void list() {
+    public void list() { // Method that list all nodes of the heap
         if (size == 0) {
             System.out.println("Heap is empty!");
             return;

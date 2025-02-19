@@ -5,30 +5,30 @@ public class Max {
     private int size;
     private int maxsize;
 
-    private static final int FRONT = 1;
+    private static final int frnt = 1;
 
     Max(int maxsize) {
         this.maxsize = maxsize;
         this.size = 0;
         Heap = new int[this.maxsize + 1];
-        Heap[0] = Integer.MAX_VALUE; // Ensure the heap property
+        Heap[0] = Integer.MAX_VALUE;
     }
 
-    private int parent(int p) { return p / 2; }
-    private int left(int p) { return p * 2; }
-    private int right(int p) { return (p * 2) + 1; }
+    private int parent(int p) { return p / 2; } // Returns the parent node postion
+    private int left(int p) { return p * 2; } // Returns the left node position
+    private int right(int p) { return (p * 2) + 1; } // Returns the right node position
 
-    private boolean leaf(int p) {
+    private boolean leaf(int p) { // Method that checks for leaf nodes
         return p > size / 2 && p <= size;
     }
 
-    private void swap(int fp, int sp) {
+    private void swap(int fp, int sp) { // Method that swaps the nodes in a heap
         int tmp = Heap[fp];
         Heap[fp] = Heap[sp];
         Heap[sp] = tmp;
     }
 
-    private void maxH(int p) {
+    private void maxH(int p) { // Method that makes the heap
         if (!leaf(p)) {
             int swapP = p;
 
@@ -45,7 +45,7 @@ public class Max {
         }
     }
 
-    public void insert(int e) {
+    public void insert(int e) { // Method that inserts nodes in a node
         if (size >= maxsize) {
             System.out.println("Heap is full!");
             return;
@@ -60,20 +60,20 @@ public class Max {
         }
     }
 
-    public int remove() {
+    public int remove() { // Method that remvoes nodes in a heap
         if (size == 0) {
             System.out.println("Heap is empty!");
             return -1;
         }
 
-        int pop = Heap[FRONT];
-        Heap[FRONT] = Heap[size--];
-        maxH(FRONT);
+        int pop = Heap[frnt];
+        Heap[frnt] = Heap[size--];
+        maxH(frnt);
 
         return pop;
     }
 
-    public void list() {
+    public void list() { // Method that lists the nodes of the heap
         if (size == 0) {
             System.out.println("Heap is empty!");
             return;
