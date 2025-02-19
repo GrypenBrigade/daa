@@ -182,13 +182,13 @@ public class Doubly {
 
         System.out.println("\nInserting 1 in the start of the list");
         head = doubly.insertStart(head, 1);
-        System.out.println("\nFoward Traversal: ");
+        System.out.println("\nNew List: ");
         doubly.forwTraversal(head);
         System.out.println(" ");
 
         System.out.println("\nInserting 5000 at the end of the list");
         tail = doubly.insertEnd(head, 5000);
-        System.out.println("\nFoward Traversal: ");
+        System.out.println("\nNew List: ");
         doubly.forwTraversal(head);
         System.out.println(" ");
 
