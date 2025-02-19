@@ -25,6 +25,31 @@
 
 ## Features
 - ### Singly Linked Lists
+    - traversal()
+    - search()
+    - length()
+    - insertAtStart()
+    - insertAtEnd()
+    - insertAtPos
+    - deleteStart()
+    - deleteEnd()
+    - deletePos()
 - ### Doubly Linked Lists
+    - forwTraversal()
+    - backTraversal()
+    - length()
+    - insertStart()
+    - insertEnd()
+    - insertPos()
+    - deleteStart()
+    - deleteEnd()
+    - deletePos()
 - ### Circular Linked Lists
+    - insertEmpty()
+    - insertStart()
+    - insertEnd()
+    - delStart()
+    - delEnd()
+    - delVal()
+    - printList()
 
