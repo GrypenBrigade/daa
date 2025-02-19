@@ -9,16 +9,16 @@ class DirectedGraph {
         adjList = new HashMap<>();
     }
 
-    public void addVertex(int vertex) {
+    public void addVertex(int vertex) { // Method that adds a vertex
         adjList.putIfAbsent(vertex, new ArrayList<>());
     }
 
-    public void addEdge(int from, int to) {
+    public void addEdge(int from, int to) { // Method that adds edges to vertices
         adjList.putIfAbsent(from, new ArrayList<>());
         adjList.get(from).add(to);
     }
 
-    public void bfs(int start) {
+    public void bfs(int start) { // Method that traverses the Directed Graph Breadth First
         Set<Integer> visited = new HashSet<>();
         Queue<Integer> queue = new LinkedList<>();
         
@@ -53,6 +53,6 @@ class DirectedGraph {
         graph.addEdge(2, 4);
         graph.addEdge(3, 4);
 
-        graph.bfs(1); // Expected output: 1 2 3 4
+        graph.bfs(1); 
     }
 }

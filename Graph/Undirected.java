@@ -9,18 +9,18 @@ class UndirectedGraph {
         adjList = new HashMap<>();
     }
 
-    public void addVertex(int vertex) {
+    public void addVertex(int vertex) { // Method that adds vertices
         adjList.putIfAbsent(vertex, new ArrayList<>());
     }
 
-    public void addEdge(int from, int to) {
+    public void addEdge(int from, int to) { // Method that adds edges to vertices
         adjList.putIfAbsent(from, new ArrayList<>());
         adjList.putIfAbsent(to, new ArrayList<>());
         adjList.get(from).add(to);
         adjList.get(to).add(from); // Since it's undirected
     }
 
-    public void bfs(int start) {
+    public void bfs(int start) { // Method that traverses the graph Breadth First
         Set<Integer> visited = new HashSet<>();
         Queue<Integer> queue = new LinkedList<>();
         
@@ -55,6 +55,6 @@ class UndirectedGraph {
         graph.addEdge(2, 4);
         graph.addEdge(3, 4);
 
-        graph.bfs(1); // Expected output: 1 2 3 4
+        graph.bfs(1); 
     }
 }
