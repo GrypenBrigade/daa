@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.*;
 
-class UndirectedGraph {
+public class UndirectedGraph {
     private Map<Integer, List<Integer>> adjList;
 
     public UndirectedGraph() {

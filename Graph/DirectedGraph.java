@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.*;
 
-class DirectedGraph {
+public class DirectedGraph {
     private Map<Integer, List<Integer>> adjList;
 
     public DirectedGraph() {
