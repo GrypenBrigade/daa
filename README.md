@@ -19,21 +19,21 @@ Step 4: Run code with command `java package.code` (ex. `java LinkedList.Singly`)
     - [Circular Linked List](https://asciinema.org/a/16458NthWSRtkHGKisK4Yyp1Z)
 - ## [Queue](Queue/Queue.md)
     ### Asciinema
-    -[Queue](https://asciinema.org/a/Yv8RUQMp9XlsErAccV0PagMRl)
-    -[PriorityQueue](https://asciinema.org/a/ced7ShaJs4KpKfREja2Udhibe)
+    - [Queue](https://asciinema.org/a/Yv8RUQMp9XlsErAccV0PagMRl)
+    - [PriorityQueue](https://asciinema.org/a/ced7ShaJs4KpKfREja2Udhibe)
 - ## [Stack](Stack/Stack.md)
     ### Asciinema
-    -[Stack](https://asciinema.org/a/bWtbWTwnZBOmSxjYrqNMI3Q2v)
+    - [Stack](https://asciinema.org/a/bWtbWTwnZBOmSxjYrqNMI3Q2v)
 - ## [Heap](Heap/Heap.md)
     ### Asciinema
-    -[MinHeap](https://asciinema.org/a/7BpRnIswGyWU8KN40wUqHs6Im)
-    -[MaxHeap](https://asciinema.org/a/UjTgDiSTLwSnCX9c6VFCLx9U4)
+    - [MinHeap](https://asciinema.org/a/7BpRnIswGyWU8KN40wUqHs6Im)
+    - [MaxHeap](https://asciinema.org/a/UjTgDiSTLwSnCX9c6VFCLx9U4)
 - ## [Graph](Graph/Graph.md)
     ### Asciinema
-    -[Directed](https://asciinema.org/a/Z0QEQ8vtKLxfe5ZU01tyF1TUz)
-    -[Undirected](https://asciinema.org/a/wqNmlqR5e5LSI5oIfQwLM8GNy)
+    - [Directed](https://asciinema.org/a/Z0QEQ8vtKLxfe5ZU01tyF1TUz)
+    - [Undirected](https://asciinema.org/a/wqNmlqR5e5LSI5oIfQwLM8GNy)
 - ## [Tree](Tree/Tree.md)
     ### Asciinema
-    -[BinaryTree](https://asciinema.org/a/7C8kLTRuF9mmym0ehTF9no3mU)
+    - [BinaryTree](https://asciinema.org/a/7C8kLTRuF9mmym0ehTF9no3mU)
 
 Made by Jerome Estomago Talaro, BSCS401
