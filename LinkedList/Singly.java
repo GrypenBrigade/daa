@@ -15,7 +15,6 @@ class Node {
 
 
 public class Singly {
-    private Node head;
 
     public void traversal(Node head) { // Method that traverses the list
         //Start from the head

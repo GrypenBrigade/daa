@@ -15,7 +15,6 @@ class Node { //Node class
 }
 
 public class Doubly {
-    private Node head;
 
     public void forwTraversal(Node head){ // Method that traverses the list forward
         Node currentNode = head; // Start at the head
