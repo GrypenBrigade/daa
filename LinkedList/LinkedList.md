@@ -11,5 +11,8 @@
 - ### Circular Linked Lists
     Circular Linked Lists has the ending node point back to the starting node, creating a loop
 
-## 
+## Features
+- ### Singly Linked Lists
+- ### Doubly Linked Lists
+- ### Circular Linked Lists
 
