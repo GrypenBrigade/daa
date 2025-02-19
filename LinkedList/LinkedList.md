@@ -6,10 +6,22 @@
 ## Types of linked lists
 - ### Singly Linked Lists
     Singly linked lists is a type of linked list that has their nodes point next to a single node
+
+    Example:
+  
+    1|2 -> 2|3 -> 3|4 -> 4|Null
 - ### Doubly Linked Lists
     Doubly linked lists has their nodes point next to another node and another pointer pointing to a previous node
+
+  Example:
+  
+     Null|1|2 <->1|2| 3 <-> 2|3|4 <-> 3|4|Null
 - ### Circular Linked Lists
     Circular Linked Lists has the ending node point back to the starting node, creating a loop
+
+  Example:
+  
+    1|2 -> 2|3 -> 3|4 -> 4|1
 
 ## Features
 - ### Singly Linked Lists
