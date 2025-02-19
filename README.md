@@ -2,8 +2,11 @@
 
 ## How to run it on Linux
 Step 1: Paste `git clone https://github.com/GrypenBrigade/daa.git` in to the command line
+
 Step 2: Change directory to the cloned repo
+
 Step 3: Compile code with command `javac /package/code.java` (ex. `javac LinkedList/Singly.java`)
+
 Step 4: Run code with command `java package.code` (ex. `java LinkedList.Singly`)
 
 `Note: Make sure you have a java compiler installed on your machine.`
