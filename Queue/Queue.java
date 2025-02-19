@@ -17,63 +17,63 @@ public class Queue {
         frnt = back = null;
     }
 
-    public boolean empty() {
+    public boolean empty() { // Method to check of method is empty
         return frnt == null && back == null;
     }
 
-    public void enqueue(int d) {
+    public void enqueue(int d) { // Method that enqueues data in to a queue
         Node newNode = new Node(d);
 
-        if(back == null) {
+        if(back == null) { // If empty, make new node that is bot the front and back
             frnt = back = newNode;
             return;
         }
 
-        back.n = newNode;
-        back = newNode;
+        back.n = newNode; // Add new node at the back
+        back = newNode; // make the back the new front
         
     }
 
-    public void dequeue() {
-        if(empty()) {
+    public void dequeue() { // Method that removes an element of the queue
+        if(empty()) { // Check if the queue;
             System.out.println("Queue underflow");
             return;
         }
 
-        Node t = frnt;
-        frnt = frnt.n;
+        Node t = frnt; // Remove front node
+        frnt = frnt.n; // Push a new front node
 
-        if(frnt == null) {
+        if(frnt == null) { // If front is null, back is now null
             back = null;
         }
     }
 
-    public int rear() {
-        if(empty()) {
+    public int rear() { // Method that checks the back of a queue
+        if(empty()) { // Check queue if empty
             System.out.println("Queue empty");
             return -1;
         }
 
-        return back.d;
+        return back.d; // Return back node
     }
 
-    public int front() {
+    public int front() { // Method that checks the front of a queue;
         if(empty()) {
             System.out.println("Queue empty");
             return -1;
         }
-        return frnt.d;
+        return frnt.d; // Return front node
     }
 
-    public void list() {
+    public void list() { // Method that lists all elements of the queue
         if(empty()) {
             System.out.println("Queue empty");
             return;
         }
-        Node temp = frnt;
-        while(temp != null) {
-            System.out.print(temp.d + ", ");
-            temp = temp.n;
+        Node temp = frnt; // Temporary node to store front
+        while(temp != null) { // Run until null
+            System.out.print(temp.d + ", "); // Print nodes
+            temp = temp.n; // Move to next node
         }
     }
 
