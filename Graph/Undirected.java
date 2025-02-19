@@ -2,23 +2,25 @@ package Graph;
 
 import java.util.*;
 
-public class DirectedGraph {
+public class Undirected {
     private Map<Integer, List<Integer>> adjList;
 
-    public DirectedGraph() {
+    public Undirected() {
         adjList = new HashMap<>();
     }
 
-    public void addVertex(int vertex) { // Method that adds a vertex
+    public void addVertex(int vertex) { // Method that adds vertices
         adjList.putIfAbsent(vertex, new ArrayList<>());
     }
 
     public void addEdge(int from, int to) { // Method that adds edges to vertices
         adjList.putIfAbsent(from, new ArrayList<>());
+        adjList.putIfAbsent(to, new ArrayList<>());
         adjList.get(from).add(to);
+        adjList.get(to).add(from); // Since it's undirected
     }
 
-    public void bfs(int start) { // Method that traverses the Directed Graph Breadth First
+    public void bfs(int start) { // Method that traverses the graph Breadth First
         Set<Integer> visited = new HashSet<>();
         Queue<Integer> queue = new LinkedList<>();
         
@@ -42,7 +44,7 @@ public class DirectedGraph {
     }
 
     public static void main(String[] args) {
-        DirectedGraph graph = new DirectedGraph();
+        Undirected graph = new Undirected();
         graph.addVertex(1);
         graph.addVertex(2);
         graph.addVertex(3);
